@@ -25,10 +25,10 @@ if platform_family?("smartos")
 end
 
 if node['supervisor']['version']
-  execute "pip install -y supervisor==#{node['supervisor']['version']}" do
+  execute "pip install supervisor==#{node['supervisor']['version']}" do
   end
 else
-  execute "pip install -y supervisor" do
+  execute "pip install supervisor" do
   end
 end
 
